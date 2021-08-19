@@ -13,17 +13,52 @@ h1 {
   text-align: center;
   padding: 0;
   margin: 0;
+  text-emphasis: bolder;
 }
 
 li {
   list-style: none;
   text-align: center;
+  text-transform: capitalize;
   padding: 0;
   margin: 0;
 }
 
-li:first-letter {
-  text-transform: capitalize;
+button {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: #fff;
+  margin: 0.5em;
+  border-radius: 15px;
+  border: 1px aqua groove;
+  height: 40px;
+  padding: 10px;
+  padding-bottom: 30px;
+  vertical-align: top;
+}
+
+button:hover {
+  background: lightpink;
+  color: maroon;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: default;
+}
+
+.form-control {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border: 1px aqua groove;
+  outline: none;
+  border-radius: 30px;
+  font-size: 100%;
+  width: 250px;
+  height: 45.5px;
 }
 
 .card {
@@ -52,18 +87,10 @@ li:first-letter {
   font-weight: 400;
 }
 
-.weather-temperature units {
+.units {
   position: relative;
-  font-size: 16px;
-  top: -40px;
-}
-
-.weather-temperature active {
-  cursor: default;
-}
-
-.weather-temperature active:hover {
-  text-decoration: none;
+  font-size: 20px;
+  top: -30px;
 }
 
 .weather-forecast-date {
@@ -78,4 +105,17 @@ li:first-letter {
 
 .weather-forecast-temperatures {
   font-size: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  width: 600px;
+}
+
+.author {
+  text-align: center;
+  font-size: 10px;
 }
