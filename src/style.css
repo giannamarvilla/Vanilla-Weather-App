@@ -19,6 +19,7 @@ h1 {
 li {
   list-style: none;
   text-align: center;
+  text-emphasis: bold;
   text-transform: capitalize;
   padding: 0;
   margin: 0;
