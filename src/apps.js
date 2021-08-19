@@ -129,6 +129,22 @@ function displayCelsiusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
+function searchLocation(position) {
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let lati = position.coords.latitude;
+  let longi = position.coords.longitude;
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${longi}&units=metric&appid=${apiKey}`;
+  axios.get(url).then(displayTemperature);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+let currentLocationButton = document.querySelector("#current-weather-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+
 let celsiusTemperature = null;
 
 let form = document.querySelector("#search-bar");
